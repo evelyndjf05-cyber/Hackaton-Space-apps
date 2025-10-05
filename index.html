@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NASA LUT RCM — IA</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>NASA · RCM LUT · IA</h1>
+    <p class="subtitle">Procesamiento, visualización y detección de cambios fenológicos</p>
+  </header>
+
+  <main class="container">
+    <section class="panel left">
+      <div id="map" style="height:400px"></div>
+      <div class="controls">
+        <!-- Input XML puro -->
+        <input type="file" id="file-xml" accept=".xml">
+        <button id="btn-process">Procesar</button>
+        <pre id="output-files"></pre>
+      </div>
+    </section>
+
+    <section class="panel right">
+      <div id="chart" style="height:250px;"></div>
+      <pre id="output-results"></pre>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLORABIU - Monitoreo de Floración en Café</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header class="hero">
+        <h1>🌺 FLORABIU</h1>
+        <p class="subtitle">Sistema de Monitoreo Satelital para Floración en Café</p>
+    </header>
+
+    <div class="container">
+        <!-- Panel de Control -->
+        <div class="panel control-panel">
+            <h2>📤 Subir Datos</h2>
+            <div class="file-inputs">
+                <div class="input-group">
+                    <label for="file-lut">Archivo LUT (.xml):</label>
+                    <input type="file" id="file-lut" accept=".xml">
+                </div>
+                <div class="input-group">
+                    <label for="file-data">Datos Satelitales (.npz):</label>
+                    <input type="file" id="file-data" accept=".npz">
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="btn-process" class="btn-primary">🌺 Analizar Floración</button>
+                <button id="btn-reset" class="btn-secondary">🔄 Limpiar</button>
+            </div>
+
+            <div class="info-box">
+                <h3>💡 Información</h3>
+                <p>Sube archivos LUTSIGMA.xml y datos .npz para analizar floración en cultivos de café.</p>
+            </div>
+        </div>
+
+        <!-- Panel de Resultados -->
+        <div class="panel results-panel">
+            <h2>📊 Resultados del Análisis</h2>
+            <div id="output" class="output-container">
+                <div class="placeholder">
+                    <p>Los resultados aparecerán aquí después del análisis...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Visualización -->
+    <div class="container">
+        <div class="panel visualization-panel">
+            <h2>🗺 Mapa de Floración</h2>
+            <div id="map"></div>
+        </div>
+        
+        <div class="panel chart-panel">
+            <h2>📈 Evolución Temporal</h2>
+            <div id="chart"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+:root{--bg:#030517; --accent:#00d1ff; --glass: rgba(255,255,255,0.04); --neon: linear-gradient(90deg,#00d1ff, #8b5cff);}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Helvetica,Arial;color:#e6f6ff;background:var(--bg)}
+header.hero{padding:24px;background:linear-gradient(180deg, rgba(0,0,0,0.3), transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+header h1{margin:0;color:var(--accent);text-shadow:0 0 18px rgba(0,209,255,0.08)}
+.subtitle{color:rgba(230,246,255,0.6)}
+.container{display:flex;gap:16px;padding:20px}
+.panel{flex:1;background:var(--glass);padding:16px;border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+.controls{margin-top:12px;display:flex;gap:8px}
+button{background:var(--neon);border:none;color:#001;padding:8px 12px;border-radius:8px;cursor:pointer}
+#chart{height:240px}
+#output{background:#001; color:#8ff; padding:8px; border-radius:8px; height:120px; overflow:auto}
